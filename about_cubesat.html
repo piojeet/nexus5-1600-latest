@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="assets/ste_logo_new.png">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Cubesat</title>
+</head>
+
+<body>
+  <!-- Main site header with navigation bar -->
+  <header>
+     <!-- header bg  -->
+     <img src="assets/nav-bg.png" alt="icon" class="header_bg">
+    <!-- Navigation bar containing logo, navigation links, and call-to-action button -->
+    <nav>
+      <!-- Logo section: links to homepage -->
+      <div class="nav_logo">
+        <a href="index.html">
+          <img src="assets/ste_logo_new.png" alt="Logo">
+        </a>
+      </div>
+
+      <!-- Navigation links section -->
+      <div class="links_nav">
+
+        <button class="close_btn">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m22.5 22.5-21-21 21 21Zm-21 0 21-21-21 21Z"></path>
+          </svg>
+        </button>
+
+        <ul>
+          <!-- Home link -->
+          <li><a href="index.html" class="nav_link active">Home</a></li>
+        </ul>
+
+      </div>
+
+      <!-- Call-to-action button section -->
+      <div class="nav_links-btn nav_links-btn-dc">
+        <a href="contact_demo_form.html" class="same_btn nav_action-btn">Contact Us</a>
+      </div>
+
+      <button class="menu_btn">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 18h18H3ZM3 6h18H3Zm0 6h18H3Z"></path>
+        </svg>
+      </button>
+
+    </nav>
+  </header>
+
+  <main>
+
+    
+    <!-- Section 1 -->
+
+    <section class="experts student_experts">
+      <div class="experts-container">
+      
+        <h2 class="experts-title student_expert-title">
+          <span class="why_explorers-title-ori">Cubesat </span> <span
+            class="why_explorers-title-exo">Capabilities</span>
+        </h2>
+        <p class="student_head-para">Tiny satellite. Big missions. From sensing our atmosphere to talking to a ground station,
+      students learn by doing — like real mission teams.
+        </p>
+
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper expert_myswiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+          <div class="swiper-wrapper" id="swiper-wrapper-9d0de044610f1102aa" aria-live="polite">
+            <div class="swiper-slide expert_swiper swiper-slide-active" role="group" aria-label="1 / 5">
+              
+
+              <!-- Slide 1: Atmospheric Sensing  -->
+              <div class="expert-card student_expert-card">
+                <!-- Expert Image -->
+                <div class="expert-image student_expert-image">
+                  <img src="assets/sense_the_atmosphere.png" alt="Atmospheric sensing board with humidity and temperature sensors">
+                  <!-- 284 × 240 -->
+                </div>
+                
+                <div class="expert-name">Sense the Atmosphere</div>
+                <p class="expert-role student_expert-role">
+                  Measure temperature, humidity, pressure & air-quality with onboard sensors.
+                  <strong>Try this:</strong> compare schoolyard vs. classroom readings and graph micro-climates.
+                </p>
+              </div>
+            </div>
+
+
+            <!-- Slide 2: Earth Imaging -->
+            <div class="swiper-slide expert_swiper swiper-slide-next" role="group" aria-label="2 / 5">
+              <div class="expert-card student_expert-card">                
+                <div class="expert-image student_expert-image">
+                  <img src="assets/snap_earth_images.png" alt="CubeSat camera taking Earth surface images">
+                </div>
+                <div class="expert-name">Snap Earth Images</div>
+                <p class="expert-role student_expert-role">
+                  Capture images, learn resolution & exposure, and classify land, cloud, and water pixels.
+                  <strong>New skill:</strong> basic computer vision for real satellite photos.
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 3: Message Relay -->
+            <div class="swiper-slide expert_swiper" role="group" aria-label="3 / 5">              
+              <div class="expert-card student_expert-card">                
+                <div class="expert-image student_expert-image">
+                  <img src="assets/send_space_messages.png" alt="Radio communication between CubeSat and ground antenna">
+                </div>              
+                <div class="expert-name">Send Space Messages</div>
+                <p class="expert-role student_expert-role">
+                  Relay short text messages via satellite path and decode them on the ground.
+                  <strong>Wow moment:</strong> message your friend in another city through the sky.
+                </p>
+              </div>
+            </div>
+
+
+            <!-- Slide 4: Orbit & Pass Prediction -->
+            <div class="swiper-slide expert_swiper" role="group" aria-label="4 / 5">
+              <div class="expert-card student_expert-card">
+                <div class="expert-image student_expert-image">
+                  <img src="assets/predict_orbits.png" alt="Orbit tracks around Earth with ground pass overlay">
+                </div>
+                <div class="expert-name">Predict Orbits & Passes</div>
+                <p class="expert-role student_expert-role">
+                  Use real Two-Line Elements (TLEs) to predict when satellites fly overhead.
+                  <strong>Challenge:</strong> plan a ground contact window to the minute.
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 5: Attitude & Pointing -->            
+            <div class="swiper-slide expert_swiper" role="group" aria-label="5 / 5">
+              <!-- Expert Card: Individual expert profile -->
+              <div class="expert-card student_expert-card">
+                <!-- Expert Image -->
+                <div class="expert-image student_expert-image">
+                  <img src="assets/point_stabilize.png" alt="Gyros and magnetometers used for satellite pointing">
+                </div>
+                <div class="expert-name">Point & Stabilize</div>
+                <p class="expert-role student_expert-role">
+                  Read gyros & magnetometers, simulate a reaction wheel, and keep the camera steady.
+                  <strong>Skill:</strong> closed-loop control — the heart of spacecraft.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div
+            class="swiper-pagination expert_pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+            <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
+              aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0"
+              role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0"
+              role="button" aria-label="Go to slide 3"></span>
+          </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Section 2 -->
+
+    <section class="explorers_section">
+      <div class="studen_setlight">
+        <img src="assets/cubesat_page_satellite.png" alt="Curious student exploring a CubeSat kit">
+      </div>
+      <div class="explorers_container">
+        <h2 class="explorers_title">
+          <span class="explorers_subtitle why_explorers-title-ori">what</span>
+          <span class="explorers_heading why_explorers-title-exo">students will</span>
+          <span class="explorers_subtitle why_explorers-title-ori">learn</span>
+        </h2>
+
+        <p class="explorers_description why_explorers-description">
+          Start simple, think like mission control. Each week adds a new system — from sensors and code to radio links and orbits.
+        </p>
+
+      <!-- 1. Electronics & Sensors -->
+
+        <div class="explorers_features">
+          <div class="explorers_feature-item">
+            <div class="explorers_icon-wrapper">
+              <img src="assets/glob.svg" alt="icon" class="explorers_icon">
+            </div>
+
+          <div class="explorers_feature-content">
+          <div class="explorers_feature-title">Electronics & Sensors</div>
+          <p class="explorers_feature-text">
+            IMU, GPS, temperature, barometer, and camera modules — wiring, safety, and clean data logging.
+            <medium class="try">Try this: log classroom vs. playground temps and plot your own micro-climate.</medium>
+          </p>          
+            </div>
+          </div>
+
+      <!-- 2. Code & Autonomy -->
+
+          <div class="explorers_feature-item">
+            <div class="explorers_icon-wrapper">
+              <img src="assets/glob.svg" alt="icon" class="explorers_icon">
+            </div>
+        <div class="explorers_feature-content">
+          <div class="explorers_feature-title">Code & Autonomy</div>
+          <p class="explorers_feature-text">
+            Read sensors, trigger actions, and run timed “mission scripts” that make your satellite act on its own.
+            <medium class="try">Try this: auto-snap a photo when light crosses a threshold.</medium>
+          </p>
+            </div>
+          </div>
+
+      <!-- 3. Radio & Ground Station -->
+
+          <div class="explorers_feature-item">
+            <div class="explorers_icon-wrapper">
+              <img src="assets/glob.svg" alt="icon" class="explorers_icon">
+            </div>
+
+          <div class="explorers_feature-content">
+          <div class="explorers_feature-title">Radio & Ground Station</div>
+          <p class="explorers_feature-text">
+            Learn how messages travel through the sky. Antennas, modulation basics, and decoding signals on the ground.
+            <medium class="try">Try this: send a short message and decode it with your “mini mission control.”</medium>
+          </p>
+            </div>
+          </div>
+
+      <!-- 4. Orbit & Pass Prediction -->
+          <div class="explorers_feature-item">
+            <div class="explorers_icon-wrapper">
+              <img src="assets/glob.svg" alt="icon" class="explorers_icon">
+            </div>
+
+            <div class="explorers_feature-content">
+              <div class="explorers_feature-title">Electronics & sensors</div>
+              <p class="explorers_feature-text">
+                IMU, GPS, temperature, barometer, and camera modules, wiring & safety.
+              </p>
+            </div>
+          </div>
+
+          <div class="explorers_feature-item">
+            <div class="explorers_icon-wrapper">
+              <img src="assets/glob.svg" alt="icon" class="explorers_icon">
+            </div>
+
+            <div class="explorers_feature-content">
+              <div class="explorers_feature-title">Electronics & sensors</div>
+              <p class="explorers_feature-text">
+                IMU, GPS, temperature, barometer, and camera modules, wiring & safety.
+              </p>
+            </div>
+          </div>
+
+          <div class="explorers_feature-item">
+            <div class="explorers_icon-wrapper">
+              <img src="assets/glob.svg" alt="icon" class="explorers_icon">
+            </div>
+
+            <div class="explorers_feature-content">
+              <div class="explorers_feature-title">Electronics & sensors</div>
+              <p class="explorers_feature-text">
+                IMU, GPS, temperature, barometer, and camera modules, wiring & safety.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="site-footer">
+      <div class="footer-container">
+
+        <!-- Top Section -->
+        <div class="footer-top">
+
+          <!-- Brand / About -->
+          <div class="footer-brand">
+            <div class="footer-logo-group">
+              <div class="footer-logo">
+                <a href="index.html"><img src="assets/ste_logo_new.png" alt="logo"></a>
+              </div>
+              <div class="footer-partners footer-partners-dc">
+                <div><img src="assets/hexstar.svg" alt="partner logo"></div>
+                <span class="line"></span>
+                <div><img src="assets/stem.svg" alt="partner logo"></div>
+              </div>
+            </div>
+
+            <div class="footer-partners footer-partners-mb">
+              <div><img src="assets/hexstar.svg" alt="partner logo"></div>
+              <span class="line"></span>
+              <div><img src="assets/stem.svg" alt="partner logo"></div>
+            </div>
+          </div>
+
+          <!-- Links Column 1 -->
+          <div class="footer-links">
+            <h4 class="footer-title">Quick Links</h4>
+            <div class="footer-links-list">
+              <a href="#">Home</a>
+              <a href="contact_demo_form.html">Contact Us</a>
+            </div>
+          </div>
+
+          <!-- Links Column 2 -->
+          <div class="footer-links">
+            <h4 class="footer-title">Company</h4>
+            <div class="footer-links-list">
+              <a href="#">About Us</a>
+              <a href="termsofuse.html">Terms and Conditions</a>
+              <a href="privacypolicy.html">Privacy Policy</a>                                       
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            Copyright 2025 © All rights reserved.
+          </p>
+          <div class="footer-socials">
+            <a href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12C2 16.991 5.657 21.128 10.438 21.879V14.89H7.898V12H10.438V9.797C10.438 7.291 11.93 5.907 14.215 5.907C15.309 5.907 16.453 6.102 16.453 6.102V8.562H15.193C13.95 8.562 13.563 9.333 13.563 10.124V12H16.336L15.893 14.89H13.563V21.879C18.343 21.129 22 16.99 22 12C22 6.477 17.523 2 12 2Z"
+                  fill="white" />
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_641)">
+                  <path
+                    d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z"
+                    fill="white" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_641">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_645)">
+                  <path
+                    d="M22.1623 5.65593C21.3989 5.99362 20.5893 6.2154 19.7603 6.31393C20.634 5.79136 21.288 4.96894 21.6003 3.99993C20.7803 4.48793 19.8813 4.82993 18.9443 5.01493C18.3149 4.34151 17.4807 3.89489 16.5713 3.74451C15.6618 3.59413 14.7282 3.74842 13.9156 4.18338C13.1029 4.61834 12.4567 5.30961 12.0774 6.14972C11.6981 6.98983 11.607 7.93171 11.8183 8.82893C10.1554 8.74558 8.52863 8.31345 7.04358 7.56059C5.55854 6.80773 4.24842 5.75097 3.1983 4.45893C2.82659 5.09738 2.63125 5.82315 2.6323 6.56193C2.6323 8.01193 3.3703 9.29293 4.4923 10.0429C3.82831 10.022 3.17893 9.84271 2.5983 9.51993V9.57193C2.5985 10.5376 2.93267 11.4735 3.54414 12.221C4.15562 12.9684 5.00678 13.4814 5.9533 13.6729C5.33691 13.84 4.6906 13.8646 4.0633 13.7449C4.33016 14.5762 4.8503 15.3031 5.55089 15.824C6.25147 16.3449 7.09742 16.6337 7.9703 16.6499C7.10278 17.3313 6.10947 17.8349 5.04718 18.1321C3.98488 18.4293 2.87442 18.5142 1.7793 18.3819C3.69099 19.6114 5.91639 20.264 8.1893 20.2619C15.8823 20.2619 20.0893 13.8889 20.0893 8.36193C20.0893 8.18193 20.0843 7.99993 20.0763 7.82193C20.8952 7.23009 21.6019 6.49695 22.1633 5.65693L22.1623 5.65593Z"
+                    fill="white" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_645">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_649)">
+                  <path
+                    d="M6.93945 5.00002C6.93919 5.53046 6.72822 6.03906 6.35296 6.41394C5.9777 6.78883 5.46889 6.99929 4.93845 6.99902C4.40802 6.99876 3.89942 6.78779 3.52453 6.41253C3.14965 6.03727 2.93919 5.52846 2.93945 4.99802C2.93972 4.46759 3.15069 3.95899 3.52595 3.5841C3.90121 3.20922 4.41002 2.99876 4.94045 2.99902C5.47089 2.99929 5.97949 3.21026 6.35437 3.58552C6.72926 3.96078 6.93972 4.46959 6.93945 5.00002ZM6.99945 8.48002H2.99945V21H6.99945V8.48002ZM13.3195 8.48002H9.33945V21H13.2795V14.43C13.2795 10.77 18.0495 10.43 18.0495 14.43V21H21.9995V13.07C21.9995 6.90002 14.9395 7.13002 13.2795 10.16L13.3195 8.48002Z"
+                    fill="white" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_649">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  </main>
+
+    <!-- Custom satellite cursor -->
+    <div id="sat-cursor" aria-hidden="true">
+      <!-- Inline SVG satellite (can replace with your gif/png if you want) -->
+      <svg width="40px" height="40px" viewBox="0 0 152 152" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M85.2634 101.955L83.0496 100.156C79.208 103.601 75.4249 107.033 71.5951 110.412C69.7141 112.071 67.8074 113.713 65.8017 115.215C63.1986 117.165 61.5591 116.959 59.2507 114.585C58.4297 113.741 57.6847 112.822 56.6641 111.663C56.3176 114.759 56.139 117.521 55.6796 120.234C54.783 125.656 52.3996 130.723 48.7946 134.871C45.0535 139.214 42.2431 139.489 38.0018 135.793C35.2833 133.425 32.6494 130.96 29.9669 128.549C29.7058 128.403 29.4267 128.293 29.1366 128.221C27.0554 129.936 24.222 130.887 23.9647 134.563C23.8092 136.787 21.7581 137.963 19.497 138.23C18.2936 138.377 17.0747 138.137 16.0166 137.546C14.9584 136.954 14.116 136.041 13.611 134.939C12.6061 132.788 12.637 130.683 14.2253 128.805C14.627 128.332 15.345 127.722 15.834 127.788C19.8751 128.338 21.3965 125.004 23.8288 122.872C22.3337 121.339 20.8432 119.935 19.497 118.404C17.0613 115.631 14.646 112.836 12.3521 109.947C10.9896 108.23 11.6689 106.377 12.6488 104.731C16.5868 98.1197 22.4827 93.9598 29.7136 91.7532C32.4754 90.9105 35.469 90.8264 38.5085 90.3749C38.2979 89.867 38.0518 89.3747 37.7721 88.9014C34.8074 84.4278 34.9918 83.1526 39.0191 79.4502C43.7566 75.0954 48.4553 70.6979 53.196 66.2978C52.3717 64.3826 51.4042 64.5775 50.1342 65.604C48.6342 66.8746 47.0458 68.0371 45.381 69.0827C42.4334 70.8357 40.6016 70.6231 38.0176 68.3371C34.6702 65.3776 31.3275 62.4097 28.1023 59.3203C19.6574 51.2316 11.2506 43.1039 2.88182 34.9373C-0.451717 31.6924 -0.486506 30.8937 2.3049 27.2201C3.13561 26.2079 4.01895 25.2399 4.95126 24.3204C11.6879 17.1663 18.4718 10.0588 25.1507 2.85816C28.2204 -0.452408 29.7398 -1.02605 33.1954 1.87037C40.0529 7.61792 46.6084 13.7271 53.2538 19.7227C58.9298 24.8454 64.5198 30.0634 70.2181 35.1612C73.8175 38.3818 74.0663 39.7798 71.391 43.7303C70.7202 44.72 70.2483 45.8548 69.5152 46.7895C68.6783 47.7362 67.7847 48.6314 66.8393 49.4699L68.8123 52.3578C70.4137 51.0629 71.9259 49.8821 73.3929 48.6476C78.4847 44.361 83.5825 40.0804 88.6343 35.7472C91.3575 33.4107 92.808 33.3673 96.79 35.9533C97.6629 35.4007 98.6402 34.7549 99.6431 34.151C109.016 28.5157 121.122 33.2171 123.454 43.4933C124.694 48.9619 122.651 53.6068 119.062 57.6046C117.735 59.0814 117.017 60.3271 117.452 62.4838C118.062 65.5029 115.892 67.4917 113.938 69.4732C109.491 73.9829 105.115 78.5635 100.472 83.3619L102.473 85.8416C103.705 84.3576 105.016 82.9416 106.401 81.5996C109.686 78.7432 112.587 78.8338 115.625 81.8622C126.073 92.2809 136.643 102.583 146.852 113.235C153.659 120.336 153.11 121.913 146.614 128.922C138.8 137.212 129.686 144.172 119.631 149.526C113.889 152.641 111.367 152.069 107.072 147.254C98.0521 137.147 88.952 127.105 79.8906 117.035C79.2953 116.392 78.7416 115.713 78.2327 115C76.1849 112.042 76.2597 111.138 78.8142 108.49C80.8548 106.376 82.9413 104.305 85.2634 101.955ZM64.1989 108.997C80.7438 94.5308 94.9582 78.4262 110.113 63.209L91.6771 42.199C74.7003 55.7458 58.4323 69.993 42.9847 85.9112L64.1989 108.997ZM43.5426 131.492C47.7195 125.895 51.3563 116.462 49.9209 110.342C48.3719 103.741 43.9719 99.9718 38.6083 99.8163C32.4472 99.6384 24.3992 102.174 20.2308 106.367C27.507 114.546 36.2934 123.341 43.5426 131.492ZM96.3778 99.9876C92.0657 103.713 87.8907 107.318 83.4808 111.128L93.8168 120.316L105.417 110.415L96.3778 99.9876ZM120.737 96.8845L111.745 86.3247L100.644 96.112L110.756 105.923L120.737 96.8845ZM16.6905 20.3942L5.85372 30.1355L16.5842 39.3787L26.0105 29.2626L16.6905 20.3942ZM30.5596 7.58576L20.2315 17.2602L29.9026 25.3252L38.6083 16.3413L30.5596 7.58576ZM143.816 121.506L136.465 114.602L124.254 123.508L131.843 132.606L143.816 121.506ZM124.54 101.225L113.813 110.237L121.37 119.455C125.177 116.252 128.805 113.198 132.659 109.954L124.54 101.225ZM41.779 45.1453L33.3221 54.1103L43.1015 63.1415L50.3088 54.8027L41.779 45.1453ZM115.848 123.914L108.67 114.446C104.704 117.728 101.114 120.694 97.4995 123.685L105.742 131.795L115.848 123.914ZM116.287 144.611L126.281 137.33L118.501 127.98C114.903 130.503 111.584 132.829 108.262 135.158L116.287 144.611ZM54.8887 33.2164L46.5624 41.2821L56.0058 49.8848L63.4467 41.2211L54.8887 33.2164ZM21.2396 43.3897L27.7432 49.1785L37.1499 41.0446C34.8173 38.5918 32.5903 36.2487 30.3384 33.88L21.2396 43.3897ZM43.8373 21.4063L34.6525 29.9537L41.8296 36.6267L50.4742 28.5407L43.8373 21.4063ZM111.938 52.965C116.007 47.6939 116.256 43.7539 112.972 40.7302C109.688 37.7064 104.4 37.8134 100.737 41.2283L111.938 52.965ZM96.3351 88.0186L88.3232 95.2863L90.1826 97.8256L98.2996 89.286L96.3351 88.0186ZM62.0041 54.5014C56.3819 59.5618 56.3819 59.5618 58.257 61.6168L64.4142 56.1291L62.0041 54.5014Z"
+          fill="currentColor" />
+      </svg>
+    </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 'auto',
+      spaceBetween: 24,
+      draggable: true,
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

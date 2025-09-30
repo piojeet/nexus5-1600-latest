@@ -1,0 +1,2013 @@
+/* Reset default browser styles and set box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Import custom font Product-Sans-Regular */
+@font-face {
+    font-family: Product-Sans-Regular;
+    src: url('../fonts/Product-Sans-Regular.woff2') format("woff2");
+    font-display: swap;
+    font-weight: 400;
+}
+
+/* Import custom font Product-Sans-Bold */
+@font-face {
+    font-family: Product-Sans-Bold;
+    src: url('../fonts/Product-Sans-Bold.woff2') format("woff2");
+    font-display: swap;
+    font-weight: 700;
+}
+
+/* Import custom font DMSans-Regular */
+@font-face {
+    font-family: DMSans-Regular;
+    src: url('../fonts/DMSans-Regular.woff2') format("woff2");
+    font-display: swap;
+    font-weight: 400;
+}
+
+/* Import custom font Orbitron-Regular */
+@font-face {
+    font-family: Orbitron-Regular;
+    src: url('../fonts/Orbitron-Regular.woff2') format("woff2");
+    font-display: swap;
+    font-weight: 400;
+}
+
+/* Import custom font DMSans-Medium */
+@font-face {
+    font-family: DMSans-Medium;
+    src: url('../fonts/DMSans-Medium.woff2') format("woff2");
+    font-display: swap;
+    font-weight: 400;
+}
+
+/* Import custom font DMSans-SemiBold */
+@font-face {
+    font-family: DMSans-SemiBold;
+    src: url('../fonts/DMSans-SemiBold.woff2') format("woff2");
+    font-display: swap;
+    font-weight: 400;
+}
+
+/* Import custom font DMSans-ExtraBold */
+@font-face {
+    font-family: DMSans-ExtraBold;
+    src: url('../fonts/DMSans-ExtraBold.woff2') format("woff2");
+    font-display: swap;
+    font-weight: 800;
+}
+
+/* Import custom font Orbitron-ExtraBold */
+@font-face {
+    font-family: Orbitron-ExtraBold;
+    src: url('../fonts/Orbitron-ExtraBold.woff2') format("woff2");
+    font-display: swap;
+    font-weight: 800;
+}
+
+/* Import custom font Orbitron-SemiBold */
+@font-face {
+    font-family: Orbitron-SemiBold;
+    src: url('../fonts/Orbitron-SemiBold.woff2') format("woff2");
+    font-display: swap;
+    font-weight: 800;
+}
+
+/* Import custom font Exo2-ExtraBold */
+@font-face {
+    font-family: Exo2-ExtraBold;
+    src: url('../fonts/Exo2-ExtraBold.woff2') format("woff2");
+    font-display: swap;
+    font-weight: 800;
+}
+
+/* Import custom font Exo2-Bold */
+@font-face {
+    font-family: Exo2-Bold;
+    src: url('../fonts/Exo2-Bold.woff2') format("woff2");
+    font-display: swap;
+    font-weight: 700;
+}
+
+/* Import custom font Exo2-Medium */
+@font-face {
+    font-family: Exo2-Medium;
+    src: url('../fonts/Exo2-Medium.woff2') format("woff2");
+    font-display: swap;
+    font-weight: 500;
+}
+
+/* === Root: define all colors and font variables === */
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #6475DC;
+    --dark-color: #150907;
+    --black-color: #000000;
+    --light-gray-color: #808182;
+    --dark-gray-color: #5A5A5C;
+    --secondary-light-color: #BEC4EA;
+    --product-sans-r: Product-Sans-Regular;
+    --product-sans-b: Product-Sans-Bold;
+    --dm-sans-r: DMSans-Regular;
+    --dm-sans-m: DMSans-Medium;
+    --dm-sans-sb: DMSans-SemiBold;
+    --dm-sans-eb: DMSans-ExtraBold;
+    --orbitron-r: Orbitron-Regular;
+    --orbitron-eb: Orbitron-ExtraBold;
+    --orbitron-sb: Orbitron-SemiBold;
+    --exo2-eb: Exo2-ExtraBold;
+    --exo2-b: Exo2-Bold;
+    --exo2-m: Exo2-Medium;
+}
+
+/* === Header and Navigation Bar Styles === */
+
+header {
+    /* Container for the site header */
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    padding: 0 48px;
+    position: relative;
+}
+
+.header_bg {
+    position: absolute;
+    height: 200px;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.menu_btn,
+.close_btn {
+    display: none;
+}
+
+.nav_links-btn-mb {
+    display: none;
+}
+
+nav {
+    /* Flex container for navigation bar */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100px;
+    position: relative;
+}
+
+.nav_logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    /* background-color: var(--primary-color); */
+    border-radius: 50%;
+    top: 0px;
+    text-align: center;
+    align-content: center;
+}
+
+
+.nav_logo img {
+    /* Logo image size */
+    width: 110px;
+}
+
+.links_nav ul {
+    /* Navigation links list styling */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.links_nav ul a {
+    /* Navigation link styles */
+    font-family: var(--product-sans-r);
+    color: var(--light-gray-color);
+    text-decoration: none;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.links_nav ul a:hover {
+    /* Hover effect for navigation links */
+    color: var(--secondary-color);
+}
+
+.nav_link.active {
+    /* Active navigation link style */
+    font-family: var(--product-sans-b);
+    color: var(--secondary-color);
+}
+
+.same_btn {
+    /* Shared button styles */
+    padding: 12px 16px;
+    border-radius: 3rem;
+    font-family: var(--dm-sans-r);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.nav_action-btn {
+    /* Call-to-action button specific styles */
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* 
+    === Hero Section Styles ===
+    Styles for the main hero section on the homepage, including layout, typography, and images.
+*/
+.get_started {
+    /* "Get Started" button in hero section */
+    background: var(--primary-color);
+    color: var(--dark-color);
+}
+
+.home_hero {
+    /* Hero section container */
+    /* max-width: 1600px; */
+    width: 100%;
+    margin: auto;
+    padding: .6rem 0;
+    background: var(--secondary-color);
+}
+
+.home_hero-container {
+    /* Main grid container for hero section */
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.2fr .8fr;
+    grid-template-columns: 1.2fr .8fr;
+    /* border-radius: 3.75rem; */
+    min-height: 825px;
+    height: auto;
+    gap: 100px;
+    padding: 48px;
+    max-width: 1600px;
+    margin: auto;
+}
+
+.home_hero-left {
+    /* Left side of hero: text and icons */
+    /* padding: 3rem; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.home_hero-title {
+    /* Hero section main title */
+    font-size: 82px;
+    line-height: 98px;
+    font-family: var(--orbitron-r);
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.home_hero-description {
+    /* Hero section description text */
+    font-size: 24px;
+    color: var(--primary-color);
+    font-family: var(--dm-sans-m);
+    line-height: 28px;
+    margin-top: 2rem;
+}
+
+.home_hero-icons {
+    /* Container for feature icons in hero */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+}
+
+.home_hero-icons-mb {
+    display: none;
+}
+
+.home_hero-icon img {
+    /* Individual icon image in hero */
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.home_hero-right {
+    /* Right side of hero: main image, info, button */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2rem;
+    /* padding: 1.5rem; */
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.home_hero-main-img img {
+    /* Main product image in hero */
+    width: 100%;
+    border-radius: 2rem;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    aspect-ratio: 1/.9;
+}
+
+.home_hero-info {
+    /* Informational text below main image in hero */
+    font-size: 14px;
+    font-family: var(--dm-sans-r);
+    line-height: 20px;
+    color: var(--primary-color);
+}
+
+/* 
+  Explorers Section style
+  -----------------------
+  Styles for the "Why Explorers" section, including layout, titles, features, and call-to-action.
+*/
+
+.why_explorers {
+    /* Main container for the explorers section */
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+    padding: 3.75rem 48px;
+    position: relative;
+}
+
+.explorers_top-img {
+    /* Decorative top image, absolutely positioned */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.why_explorers-title {
+    /* Main section title */
+    font-size: 64px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.why_explorers-title-ori {
+    /* "Orbitron" font part of the title */
+    font-family: var(--orbitron-eb);
+    color: var(--black-color);
+}
+
+.why_explorers-title-exo {
+    /* "Exo 2" font part of the title, secondary color */
+    font-family: var(--exo2-eb);
+    color: var(--secondary-color);
+}
+
+.why_explorers-subtitle {
+    /* Subtitle below the main title */
+    text-align: center;
+    font-family: var(--dm-sans-sb);
+    font-size: 28px;
+    margin-top: 24px;
+}
+
+.why_explorers-description {
+    /* Description text for the section */
+    font-family: var(--dm-sans-r);
+    color: var(--light-gray-color);
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 24px;
+}
+
+.why_explorers-content {
+    /* Layout for features and CTA block */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 24px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.why_explorers-cta {
+    /* Call-to-action block styling */
+    width: 400px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    background: var(--secondary-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.why_explorers-features {
+    /* Grid layout for feature cards */
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 24px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.why_explorers-feature {
+    /* Individual feature card styling */
+    background: #F8F9FF;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.why_explorers-icon {
+    /* Icon container for features and CTA */
+    border: 1px solid var(--dark-color);
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.why_explorers-feature-title {
+    /* Title for each feature card */
+    font-size: 24px;
+    font-family: var(--exo2-eb);
+    text-transform: uppercase;
+    margin-top: 1rem;
+    color: var(--secondary-color);
+}
+
+.why_explorers-feature-text {
+    /* Description text for each feature */
+    font-family: var(--dm-sans-r);
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--light-gray-color);
+}
+
+.why_explorers-cta-title {
+    /* CTA block title */
+    font-family: var(--exo2-b);
+    font-size: 44px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+}
+
+.why_explorers-cta-description {
+    /* CTA block description text */
+    font-family: var(--dm-sans-r);
+    font-size: 22px;
+    color: #EBEEFF;
+    margin-top: 8px;
+}
+
+.why_explorers-cta .why_explorers-icon {
+    /* CTA icon border color override */
+    border-color: var(--primary-color);
+}
+
+/* === Experts Section Styles === */
+
+/* Main experts section container */
+.experts {
+    /* Limit section width */
+    width: 100%;
+    /* Full width */
+    /* Horizontal padding (auto is ignored for padding, likely a mistake) */
+    margin: auto;
+    /* Center section */
+    background: var(--secondary-color);
+}
+
+.student_experts {
+    padding-top: 8px;
+}
+
+/* Inner container for experts section */
+.experts-container {
+    /* Section background color */
+    padding: 3.75rem 48px;
+    /* Inner padding */
+    max-width: 1600px;
+    margin: auto;
+}
+
+/* Section title styling */
+.experts-title {
+    max-width: 800px;
+    /* Limit title width */
+    font-size: 64px;
+    /* Large font size */
+    text-transform: uppercase;
+    /* Uppercase text */
+}
+
+/* Title part with original color */
+.experts-title .why_explorers-title-ori {
+    color: var(--primary-color);
+    /* White color for part of the title */
+}
+
+/* Title part with accent color */
+.experts-title .why_explorers-title-exo {
+    color: var(--black-color);
+    /* Black color for part of the title */
+}
+
+/* Expert name styling */
+.expert-name {
+    font-family: var(--exo2-m);
+    /* Medium Exo2 font */
+    font-weight: 500;
+    /* Medium weight */
+    color: var(--primary-color);
+    /* White text */
+    font-size: 22px;
+    /* Font size */
+    margin-top: 1rem;
+    /* Space above name */
+}
+
+/* Expert role styling */
+.expert-role {
+    font-family: var(--dm-sans-r);
+    /* Regular DM Sans font */
+    font-size: 14px;
+    /* Font size */
+    line-height: 22px;
+    /* Line height */
+    color: var(--secondary-light-color);
+    /* Light secondary color */
+}
+
+/* Expert image container */
+.expert-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Flex container for image */
+    aspect-ratio: .9/1;
+    /* Aspect ratio for image box */
+}
+
+/* Expert image itself */
+.expert-image img {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    -o-object-fit: cover;
+    object-fit: cover;
+    /* Cover the container */
+    border-radius: 42px;
+    /* Rounded corners */
+}
+
+/* Expert card container */
+.expert-card {
+    width: 290px;
+    /* Fixed card width */
+}
+
+/* Swiper slide for expert */
+.expert_swiper {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    /* Fit content width for Swiper slide */
+}
+
+/* Swiper container for experts */
+.expert_myswiper {
+    padding-bottom: 3rem;
+    /* Space below Swiper */
+    margin-top: 60px;
+    /* Space above Swiper */
+}
+
+/* Swiper pagination bullet styling */
+.swiper-pagination-bullet {
+    width: 14px !important;
+    /* Bullet width */
+    height: 14px !important;
+    /* Bullet height */
+    opacity: 1 !important;
+    /* Full opacity */
+}
+
+/* Swiper pagination bullet (inactive) for experts */
+.expert_pagination .swiper-pagination-bullet {
+    background: #ffffff59 !important;
+    /* Semi-transparent white background */
+}
+
+/* Swiper pagination bullet (active) */
+.swiper-pagination-bullet-active {
+    width: 41px !important;
+    /* Elongated active bullet */
+    border-radius: 40px !important;
+    /* Rounded active bullet */
+}
+
+/* Swiper pagination bullet (active) for experts */
+.expert_pagination .swiper-pagination-bullet-active {
+    background: var(--primary-color) !important;
+    /* Solid white for active bullet */
+}
+
+/* Kids Saying/Testimonial Section container */
+.kids-saying {
+    max-width: 1600px;
+    /* Maximum width for the section */
+    width: 100%;
+    /* Full width */
+    margin: auto;
+    /* Center horizontally */
+    padding: 60px 48px;
+    /* Vertical padding */
+}
+
+/* Kids Saying section title */
+.kids-saying-title {
+    font-size: 64px;
+    /* Large font size */
+    text-transform: uppercase;
+    /* Uppercase text */
+    text-align: center;
+    /* Centered text */
+}
+
+/* Kids Saying section subtitle */
+.kids-saying-subtitle {
+    font-family: var(--dm-sans-r);
+    /* Regular DM Sans font */
+    text-align: center;
+    /* Centered text */
+    color: #5A5A5C;
+    /* Subtitle color */
+    line-height: 24px;
+    /* Line height */
+}
+
+/* Testimonial card container style */
+.testimonial {
+    width: 936px;
+    /* Fixed width for testimonial card */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Flex layout for image and content */
+    gap: 1.5rem;
+    /* Gap between image and content */
+}
+
+/* Testimonial content (text and author) */
+.testimonial-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Flex layout */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /* Stack vertically */
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    /* Space between text and author */
+    padding: 8px 0;
+    /* Vertical padding */
+}
+
+/* Testimonial text/quote */
+.testimonial-text {
+    font-size: 22px;
+    /* Font size for testimonial text */
+    font-family: var(--dm-sans-r);
+    /* Regular DM Sans font */
+    color: var(--dark-gray-color);
+    /* Text color */
+    line-height: 40px;
+    /* Line height for readability */
+}
+
+/* Testimonial author name */
+.testimonial-author .author-name {
+    font-size: 22px;
+    /* Font size for author name */
+    font-family: var(--dm-sans-sb);
+    /* Semi-bold DM Sans font */
+    color: var(--black-color);
+    /* Author name color */
+}
+
+/* Testimonial author role/title */
+.testimonial-author .author-role {
+    font-size: 20px;
+    /* Font size for author role */
+    font-family: var(--dm-sans-r);
+    /* Regular DM Sans font */
+    color: var(--light-gray-color);
+    /* Author role color */
+}
+
+/* Swiper container for kids saying/testimonials */
+.kids_saying-myswiper {
+    position: relative;
+    /* Needed for gradient overlays */
+}
+
+/* Left gradient overlay for Swiper (visual fade effect) */
+.kids_saying-myswiper::after {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: -20px;
+    width: 200px;
+    height: 100%;
+    background: -webkit-gradient(linear, right top, left top, from(#ffffff00), to(#ffff));
+    background: -o-linear-gradient(right, #ffffff00, #ffff);
+    background: linear-gradient(to left, #ffffff00, #ffff);
+    /* Transparent to white */
+    z-index: 10;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    /* Soft blur for effect */
+    pointer-events: none;
+}
+
+/* Right gradient overlay for Swiper (visual fade effect) */
+.kids_saying-myswiper::before {
+    content: '';
+    position: absolute;
+    right: -1rem;
+    top: -20px;
+    width: 200px;
+    height: 100%;
+    background: -webkit-gradient(linear, right top, left top, from(#ffffff), to(#ffffff00));
+    background: -o-linear-gradient(right, #ffffff, #ffffff00);
+    background: linear-gradient(to left, #ffffff, #ffffff00);
+    /* White to transparent */
+    z-index: 10;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    /* Soft blur for effect */
+    pointer-events: none;
+}
+
+/* Swiper pagination bullet styling for kids saying section (inactive) */
+.kids_saying-pagination .swiper-pagination-bullet {
+    background: var(--secondary-light-color) !important;
+    /* Light secondary color */
+}
+
+/* Swiper pagination bullet styling for kids saying section (active) */
+.kids_saying-pagination .swiper-pagination-bullet-active {
+    background: var(--secondary-color) !important;
+    /* Main secondary color */
+}
+
+/* Swiper slide for kids saying/testimonials */
+.kids_swiper-slide {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    /* Fit content width for Swiper slide */
+}
+
+/* Book Summaries Section style */
+.book-summaries {
+    max-width: 1600px;
+    /* Limit the maximum width */
+    width: 100%;
+    /* Take full width up to max */
+    margin: auto;
+    /* Center horizontally */
+    padding: 60px 48px;
+    /* Section padding (top/bottom, left/right) */
+}
+
+/* Book Summaries Section Title */
+.book-summaries-title {
+    text-align: center;
+    /* Center the title text */
+    font-size: 64px;
+    /* Large font size for emphasis */
+    text-transform: uppercase;
+    /* Uppercase letters for style */
+}
+
+/* Book Summary Image Container */
+.book-summaries-image {
+    width: 177px;
+    /* Fixed width for image container */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Use flex for alignment if needed */
+}
+
+/* Book Summary Image Styling */
+.book-summaries-image img {
+    width: 100%;
+    /* Image fills the container width */
+}
+
+/* Swiper Container for Book Summaries */
+.book_swiper-cont {
+    max-width: 876px;
+    /* Limit the maximum width of swiper */
+    width: 100%;
+    /* Take full width up to max */
+    margin: auto;
+    /* Center horizontally */
+    margin-top: 60px;
+    /* Space above the swiper */
+}
+
+/* Swiper Instance for Book Summaries */
+.book_myswiper {
+    padding-bottom: 3rem;
+    /* Space below swiper for pagination or controls */
+}
+
+/* Footer main container */
+.site-footer {
+    background: var(--black-color);
+    /* Set footer background color */
+}
+
+/* Footer content wrapper with background image and gradient overlay */
+.footer-container {
+    max-width: 1600px;
+    /* Limit footer width */
+    width: 100%;
+    /* Full width up to max */
+    margin: auto;
+    /* Center horizontally */
+    padding: 0 48px;
+    /* Horizontal padding */
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('../assets/footer-bg.png');
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/footer-bg.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/footer-bg.png');
+    /* Overlay gradient on image */
+    background-repeat: no-repeat;
+    /* Prevent image repeat */
+    background-size: cover;
+    /* Cover entire container */
+    background-position: 50% 50%;
+    /* Center background image */
+}
+
+/* Top section of the footer with grid layout */
+.footer-top {
+    display: -ms-grid;
+    display: grid;
+    /* Use grid for layout */
+    -ms-grid-columns: 1.3fr 1fr 1fr;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    /* Three columns, first is wider */
+    padding: 70px 0;
+    /* Vertical padding */
+}
+
+/* List of footer links */
+.footer-links-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Use flexbox */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /* Stack links vertically */
+    gap: 14px;
+    /* Space between links */
+}
+
+/* Footer link styles */
+.footer-links-list a {
+    font-family: var(--dm-sans-r);
+    /* Regular font */
+    font-weight: 400;
+    color: var(--primary-color);
+    /* Main color */
+    text-decoration: none;
+    /* Remove underline */
+    width: fit-content;
+}
+
+/* Footer link hover effect */
+.footer-links-list a:hover {
+    color: var(--secondary-color);
+    /* Change color on hover */
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    /* Shrink to fit text */
+}
+
+/* Footer section titles */
+.footer-title {
+    font-family: var(--dm-sans-eb);
+    /* Extra bold font */
+    font-size: 24px;
+    /* Large font size */
+    color: var(--primary-color);
+    /* Main color */
+    margin-bottom: 24px;
+    /* Space below title */
+}
+
+/* Group of logos in the footer */
+.footer-logo-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Arrange logos in a row */
+    gap: 2rem;
+    /* Space between logos */
+}
+
+/* Partner logo image size */
+.footer-partners img {
+    width: 112px;
+    /* Set width for partner logos */
+}
+
+/* Partner logos container */
+.footer-partners {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Use flexbox */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /* Stack vertically */
+    gap: 8px;
+    /* Space between items */
+}
+
+/* Divider line in partners section */
+.footer-partners .line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--dark-gray-color);
+    /* Line color */
+}
+
+/* Main logo image size */
+.footer-logo img {
+    width: 98px;
+    /* Set width for main logo */
+}
+
+/* Footer description text */
+.footer-description {
+    font-family: var(--dm-sans-r);
+    /* Regular font */
+    color: #D9DDF4;
+    /* Light text color */
+    line-height: 24px;
+    /* Readable line height */
+}
+
+/* Bottom section of the footer */
+.footer-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Arrange content in a row */
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    /* Space out children */
+    padding: 30px 0;
+    /* Vertical padding */
+    border-top: 1px solid #ffffff1e;
+    /* Subtle top border */
+}
+
+/* Copyright text styling */
+.footer-copyright {
+    font-family: var(--dm-sans-r);
+    /* Regular font */
+    color: var(--primary-color);
+    /* Main color */
+}
+
+/* Social media icons container */
+.footer-socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Arrange icons in a row */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* Center vertically */
+    gap: 12px;
+    /* Space between icons */
+}
+
+/* student learning page style  */
+/* ===========================
+   Student Learning Page Styles
+   =========================== */
+
+/* Paragraph under the student expert section heading */
+.student_head-para {
+    font-family: var(--dm-sans-r);
+    text-align: center;
+    color: #DCDDDE;
+    line-height: 24px;
+}
+
+/* Image container for student expert cards, maintains aspect ratio */
+.student_expert-image {
+    aspect-ratio: 1/.85;
+}
+
+/* Card styling for each student expert */
+.student_expert-card {
+    background: #ffffff1e;
+    /* semi-transparent white */
+    padding: 1rem;
+    border-radius: 32px;
+}
+
+/* Role/description text in student expert card */
+.student_expert-role {
+    margin-top: 8px;
+}
+
+/* Title styling for student expert section */
+.student_expert-title {
+    text-align: center;
+    margin: auto;
+}
+
+/* Original part of the expert title (black color) */
+.student_expert-title .why_explorers-title-ori {
+    color: var(--black-color);
+}
+
+/* Highlighted part of the expert title (primary color) */
+.student_expert-title .why_explorers-title-exo {
+    color: var(--primary-color);
+}
+
+/* ===========================
+   Explore Section Styles
+   =========================== */
+
+/* Main title for the explorers section */
+.explorers_title {
+    font-size: 64px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Description text under the explorers title */
+.explorers_description {
+    margin-top: 8px;
+}
+
+/* Grid layout for explorer features */
+.explorers_features {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 32px 1fr 32px 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 32px;
+    -moz-column-gap: 32px;
+    column-gap: 32px;
+    row-gap: 40px;
+    margin-top: 60px;
+}
+
+/* Container for the explorers section */
+.explorers_section {
+    max-width: 1600px;
+    width: 100%;
+    padding: 60px 48px;
+    margin: auto;
+    position: relative;
+}
+
+/* Individual feature item in the explorers section */
+.explorers_feature-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 24px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+/* Title for each explorer feature */
+.explorers_feature-title {
+    font-size: 22px;
+    font-family: var(--exo2-eb);
+    color: var(--black-color);
+    text-transform: uppercase;
+}
+
+/* Description text for each explorer feature */
+.explorers_feature-text {
+    font-size: 14px;
+    font-family: var(--dm-sans-r);
+    color: #747683;
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: 8px;
+}
+
+/* Decorative spotlight image in the student section */
+.studen_setlight {
+    position: absolute;
+    top: 64px;
+    right: 0;
+}
+
+/* ===========================
+   Demo Section Styles
+   =========================== */
+
+/* Main title for the demo section */
+.demo_title {
+    font-size: 64px;
+    text-transform: uppercase;
+}
+
+/* Container for the demo section */
+.demo_section {
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+    padding: 60px 48px;
+}
+
+/* Grid layout for demo content and form */
+.demo_container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1.5rem .9fr;
+    grid-template-columns: 1fr .9fr;
+    gap: 1.5rem;
+}
+
+/* Wrapper for the demo form */
+.demo_form-wrapper {
+    background: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.contact_logo img {
+    width: 200px;
+}
+
+/* Demo form layout */
+.demo_form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 32px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+/* Container for all form fields */
+.demo_form-fields {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Row layout for form fields (two columns) */
+.demo_form-row {
+    /* display: -ms-grid; */
+    /* display: grid; */
+    /* -ms-grid-columns: 1fr 1rem 1fr; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* gap: 1rem; */
+}
+
+/* Individual field in the form */
+.demo_field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Input styling for the demo form */
+.demo_input {
+    padding: 14px 12px;
+    background: transparent;
+    border-radius: 32px;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    font-family: var(--dm-sans-m);
+    color: var(--primary-color);
+    line-height: 24px;
+}
+
+/* Placeholder color for demo form inputs */
+.demo_input::-webkit-input-placeholder {
+    color: var(--primary-color);
+}
+
+.demo_input::-moz-placeholder {
+    color: var(--primary-color);
+}
+
+.demo_input:-ms-input-placeholder {
+    color: var(--primary-color);
+}
+
+.demo_input::-ms-input-placeholder {
+    color: var(--primary-color);
+}
+
+.demo_input::placeholder {
+    color: var(--primary-color);
+}
+
+/* Title above the demo form */
+.demo_form-title {
+    font-size: 34px;
+    font-family: var(--orbitron-sb);
+    color: var(--primary-color);
+}
+
+/* Label styling for form fields */
+.demo_label {
+    font-family: var(--dm-sans-m);
+    color: var(--primary-color);
+    line-height: 24px;
+}
+
+/* Textarea styling for the demo form */
+.demo_textarea {
+    padding: 14px 12px;
+    background: transparent;
+    border-radius: 16px;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    font-family: var(--dm-sans-m);
+    color: var(--primary-color);
+    line-height: 24px;
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Placeholder color for textarea */
+.demo_textarea::-webkit-input-placeholder {
+    color: var(--primary-color);
+}
+
+.demo_textarea::-moz-placeholder {
+    color: var(--primary-color);
+}
+
+.demo_textarea:-ms-input-placeholder {
+    color: var(--primary-color);
+}
+
+.demo_textarea::-ms-input-placeholder {
+    color: var(--primary-color);
+}
+
+.demo_textarea::placeholder {
+    color: var(--primary-color);
+}
+
+/* Button styling for the demo form */
+.demo_button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Header section in the demo area */
+.demo_header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Description text in the demo section */
+.demo_description {
+    font-family: var(--dm-sans-r);
+    color: #283D52;
+    line-height: 24px;
+}
+
+.footer-partners-mb {
+    display: none;
+}
+
+.demo_radio-group {
+    font-family: var(--dm-sans-r);
+    color: var(--primary-color);
+    display: flex;
+    column-gap: 1rem;
+    row-gap: 10px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .home_hero-title {
+        font-size: 51px;
+        line-height: normal;
+    }
+
+    .home_hero-container {
+        min-height: 640px;
+    }
+
+    .why_explorers-title,
+    .experts-title,
+    .kids-saying-title,
+    .book-summaries-title,
+    .explorers_title,
+    .demo_title {
+        font-size: 40px;
+    }
+
+    .why_explorers-subtitle {
+        margin-top: 8px;
+    }
+
+    .why_explorers-cta-title {
+        font-size: 35px;
+    }
+
+    .why_explorers-cta {
+        width: 330px;
+    }
+
+    .experts-title {
+        max-width: 500px;
+    }
+
+    .expert-card {
+        width: 250px;
+    }
+
+    .why_explorers {
+        padding: 3.75rem 20px;
+    }
+
+    .demo_container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .demo_title,
+    .demo_description {
+        text-align: center;
+    }
+
+    .studen_setlight img {
+        width: 15vw;
+    }
+
+    .nav_logo img {
+        /* Logo image size */
+        width: 90px;
+    }
+
+    .contact_logo img {
+        margin: auto;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .home_hero-container {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 1rem;
+    }
+
+    .home_hero-left,
+    .home_hero-right {
+        padding: 0;
+    }
+
+    .home_hero-container {
+        border-radius: 24px;
+    }
+
+    .home_hero-right {
+        gap: 1rem;
+    }
+
+    .home_hero-icons-dc {
+        display: none;
+    }
+
+    .home_hero-icons-mb {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .home_hero-btn {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home_hero-description {
+        margin-top: 1rem;
+    }
+
+    .home_hero-title {
+        font-size: 40px;
+    }
+
+    .home_hero-description {
+        font-size: 18px;
+    }
+
+    .explorers_top-img img {
+        width: 15vw;
+    }
+
+    .why_explorers-content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .why_explorers-cta {
+        gap: 60px;
+        width: 100%;
+    }
+
+    .why_explorers-title,
+    .experts-title,
+    .kids-saying-title,
+    .book-summaries-title,
+    .explorers_title,
+    .demo_title {
+        font-size: 30px;
+    }
+
+    .why_explorers-subtitle {
+        font-size: 20px;
+    }
+
+    .testimonial-text {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .testimonial {
+        width: 100%;
+    }
+
+    .kids_saying-myswiper::before,
+    .kids_saying-myswiper::after {
+        display: none;
+    }
+
+    .kids-saying-container {
+        padding: 0 1rem;
+    }
+
+    .expert_slide {
+        width: 100% !important;
+    }
+
+    header {
+        padding: 0 1rem;
+    }
+
+    nav {
+        height: 80px;
+    }
+
+    .nav_logo img {
+        width: 64px;
+    }
+
+    .links_nav {
+        position: fixed;
+        height: 100dvh;
+        background: var(--primary-color);
+        left: -300px;
+        top: 0;
+        max-width: 300px;
+        width: 100%;
+        z-index: 100;
+        padding-top: 80px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 1rem;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-transition: .5s cubic-bezier(0.23, 1.00, 0.32, 1.00);
+        -o-transition: .5s cubic-bezier(0.23, 1.00, 0.32, 1.00);
+        transition: .5s cubic-bezier(0.23, 1.00, 0.32, 1.00);
+    }
+
+    .links_nav.active {
+        left: 0;
+    }
+
+    .links_nav ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+
+    }
+
+    .nav_links-btn-dc {
+        display: none;
+    }
+
+    .menu_btn {
+        width: 48px;
+        height: 48px;
+        background: var(--secondary-color);
+        outline: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        outline: none;
+        border: none;
+        color: var(--primary-color);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .nav_links-btn-mb,
+    .close_btn {
+        display: block;
+    }
+
+    .close_btn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 30px;
+        height: 30px;
+        background: var(--secondary-color);
+        color: var(--primary-color);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        border-radius: 50%;
+        outline: none;
+        border: none;
+    }
+
+    .no-scroll {
+        overflow: hidden;
+    }
+
+    .home_hero-icon img {
+        border-radius: 1rem;
+    }
+
+    .same_btn {
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    .footer-top {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1.4fr .6fr;
+        grid-template-columns: 1.4fr .6fr;
+    }
+
+    .book-summaries {
+        max-width: 1600px;
+        width: 100%;
+        margin: auto;
+        padding: 40px 16px;
+    }
+
+    .footer-container {
+        padding: 0 20px;
+    }
+
+    .footer-top {
+        padding: 40px 0;
+    }
+
+    .expert_myswiper {
+        margin-top: 40px;
+    }
+
+    .experts-container {
+        padding: 2.5rem 20px;
+    }
+
+    .kids-saying {
+        padding: 40px 0;
+    }
+
+    .experts-container {
+        border-radius: 24px;
+    }
+
+    .testimonial-author .author-name {
+        font-size: 20px;
+    }
+
+    .testimonial-author .author-role {
+        font-size: 18px;
+    }
+
+    .explorers_features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .explorers_section,
+    .demo_section {
+        padding: 40px 20px;
+    }
+
+    .demo_header {
+        gap: 8px;
+    }
+
+    .demo_form-title {
+        font-size: 24px;
+    }
+
+    .demo_label {
+        font-size: 14px;
+    }
+
+    .studen_setlight {
+        display: none;
+    }
+
+    .explorers_features {
+        margin-top: 24px;
+    }
+
+    .expert-image img {
+        border-radius: 32px;
+    }
+
+    .footer-logo img {
+        width: 80px;
+    }
+
+    .explorers_description,
+    .demo_description {
+        font-size: 14px;
+    }
+
+    .demo_form {
+        gap: 24px;
+    }
+
+    .demo_button {
+        margin: auto;
+    }
+
+    .why_explorers-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .book-summaries-image {
+        width: 120px;
+    }
+
+    .book_swiper-cont {
+        margin-top: 40px;
+    }
+
+    #sat-cursor {
+        display: none;
+    }
+
+    .header_bg {
+        display: none;
+    }
+
+    .nav_logo {
+        position: static;
+        width: fit-content;
+        height: fit-content;
+        left: unset;
+        transform: none;
+    }
+
+    .contact_logo img {
+        width: 150px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .footer-top {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-brand {
+        margin-bottom: 20px;
+    }
+
+    .footer-partners-dc {
+        display: none;
+    }
+
+    .footer-partners-mb {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .footer-partners .line {
+        width: 1px;
+        height: 40px;
+    }
+
+    .footer-description {
+        margin-top: 1rem;
+    }
+
+    .footer-title {
+        font-size: 22px;
+    }
+
+    .footer-bottom {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .why_explorers-features {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+    }
+
+    .testimonial {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .testimonial-content {
+        padding: 0;
+        gap: 1rem;
+    }
+
+    .footer-copyright,
+    .footer-links-list a {
+        font-size: 14px;
+    }
+
+    .footer-links-list {
+        gap: 8px;
+    }
+
+    .footer-title {
+        margin-bottom: 1rem;
+    }
+
+    .book-summaries-subtitle {
+        margin-top: 1rem;
+    }
+
+    .kids-saying-subtitle {
+        font-size: 14px;
+    }
+
+    .explorers_top-img {
+        top: 47px;
+    }
+
+    .explorers_features {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+    }
+
+    .demo_form-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .explorers_feature-item {
+        gap: .7rem;
+    }
+
+    .explorers_icon-wrapper img {
+        width: 32px;
+    }
+
+    .explorers_feature-title {
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (max-width: 425px) {
+    .testimonial-image img {
+        width: 100%;
+    }
+
+    .contact_logo img {
+        width: 100px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .home_hero-container {
+        -ms-grid-columns: 1.1fr .9fr;
+        grid-template-columns: 1.1fr .9fr;
+        gap: 120px;
+    }
+}
+
+
+/* show custom cursor only on wider screens (desktop) */
+@media (min-width: 768px) {
+
+    /* satellite cursor element */
+    #sat-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 34px;
+        height: 34px;
+        pointer-events: none;
+        /* allow clicks through it */
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 150ms ease, opacity 50ms ease;
+        will-change: transform, opacity;
+        z-index: 99999;
+       
+    }
+
+    /* smaller when hovering interactive elements, optional */
+    .sat-small {
+        transform: translate(-50%, -50%) scale(0.75) !important;
+        opacity: 0.95;
+    }
+
+    /* hide on touch or when explicitly disabled via class */
+    .sat-disabled {
+        display: none !important;
+    }
+
+    #sat-cursor.sat-white {
+        color: white; /* footer par white ho jayega */
+      }
+}

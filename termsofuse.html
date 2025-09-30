@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Terms & Conditions — Space Tech Explorers</title>
+  <meta name="description" content="Terms and Conditions for Space Tech Explorers." />
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <style>
+    :root {
+      --bg: #0f1021;
+      --surface: #16172b;
+      --text: #f6f7fb;
+      --muted: #b8bbd9;
+      --border: #2b2d4a;
+      --brand: #7c7cff;
+      --link: #8ecbff;
+      --maxw: 1200px;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --surface: #ffffff;
+        --text: #0f1021;
+        --muted: #44485f;
+        --border: #e7e8f3;
+        --link: #0a66c2;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none
+    }
+
+    a:hover {
+      text-decoration: underline
+    }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 24px
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: saturate(120%) blur(6px);
+      background: color-mix(in srgb, var(--bg) 86%, transparent);
+      border-bottom: 1px solid var(--border)
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .brand .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background:
+        radial-gradient(60% 60% at 35% 35%, #9a7cff, var(--brand));
+      box-shadow: 0 0 24px color-mix(in srgb, var(--brand) 40%, transparent)
+    }
+
+    .brand h1 {
+      font-size: 18px;
+      margin: 0
+    }
+
+    .meta {
+      font-size: 13px;
+      color: var(--muted)
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      margin-top: 24px
+    }
+
+    @media (max-width:980px) {
+      main {
+        grid-template-columns: 1fr
+      }
+    }
+
+    nav.toc {
+      position: sticky;
+      top: 180px;
+      align-self: start;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      background: var(--surface)
+    }
+
+    nav .toc-title {
+      font-size: 14px;
+      margin: 0 0 8px 0;
+      color: var(--muted);
+      letter-spacing: .02em
+    }
+
+    .toc ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 6px
+    }
+
+    .toc a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid transparent
+    }
+
+    .toc a:focus-visible,
+    .toc a:hover {
+      border-color: var(--border)
+    }
+
+    article {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--surface);
+      padding: 20px 20px 8px
+    }
+
+    article h2,
+    article h3 {
+      scroll-margin-top: 90px
+    }
+
+    article h2 {
+      font-size: 22px;
+      margin: 24px 0 8px
+    }
+
+    article h3 {
+      font-size: 18px;
+      margin: 16px 0 6px;
+      color: var(--muted)
+    }
+
+    p {
+      margin: 10px 0
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      background: color-mix(in srgb, var(--surface) 85%, transparent)
+    }
+
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 32px;
+      padding: 24px 0
+    }
+
+    /* Mobile TOC */
+    details.toc-mobile {
+      display: none
+    }
+
+    .privacy_pl {
+      padding-left: 40px;
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        padding: 1rem;
+      }
+
+      .header_wraper {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .brand .dot {
+        height: 10px;
+        width: 10px;
+        margin-top: 10px;
+        flex-shrink: 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: start;
+        gap: 5px;
+      }
+
+      .privacy_fs14 {
+        font-size: 14px;
+      }
+
+      .privacy_pl {
+        padding-left: 20px;
+      }
+
+      article {
+        padding: 16px 16px 8px;
+      }
+
+      article h2 {
+        font-size: 20px;
+      }
+    }
+
+    .toc-mobile {
+      display: none;
+    }
+
+    @media (max-width:980px) {
+      nav.toc {
+        display: none
+      }
+
+      details.toc-mobile {
+        display: block;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: var(--surface);
+        padding: 8px
+      }
+
+      details.toc-mobile summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 10px 12px;
+        border-radius: 10px
+      }
+
+      details.toc-mobile ul {
+        margin: 8px 0 0;
+        padding: 0 6px 6px
+      }
+
+      details.toc-mobile a {
+        display: block;
+        padding: 8px;
+        border-radius: 8px
+      }
+
+      details[open] summary {
+        background: color-mix(in srgb, var(--surface) 80%, transparent)
+      }
+
+      .toc-mobile ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        list-style: none;
+      }
+
+      .toc-mobile {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap header_wraper"
+      style="display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <h1>Space Tech Explorers — Terms & Conditions</h1>
+      </div>
+      <div class="meta">
+        <div>Last Updated: <strong>Sept 23rd, 2025</strong></div>
+        <div>Effective Date: <strong>Oct 2nd, 2025</strong></div>
+      </div>
+    </div>
+  </header>
+  <div class="wrap" style="padding: 1rem 24px 0;">
+    <a href="index.html" class="">Home</a>
+  </div>
+  <div class="wrap">
+    <!-- Mobile TOC -->
+    <div class="toc-mobile">
+      <p><strong>Table of Contents</strong></p>
+      <ul>
+        <li><a href="#welcome">Overview</a></li>
+        <li><a href="#eligibility">1. Eligibility</a></li>
+        <li><a href="#purpose">2. Educational Purpose</a></li>
+        <li><a href="#accounts">3. Account Registration & Security</a></li>
+        <li><a href="#payments">4. Payments & Subscriptions</a></li>
+        <li><a href="#acceptable-use">5. Acceptable Use</a></li>
+        <li><a href="#ip">6. Intellectual Property</a></li>
+        <li><a href="#student-data">7. Student Data & Privacy</a></li>
+        <li><a href="#third-parties">8. Third-Party Services</a></li>
+        <li><a href="#disclaimers">9. Disclaimers</a></li>
+        <li><a href="#liability">10. Limitation of Liability</a></li>
+        <li><a href="#indemnity">11. Indemnification</a></li>
+        <li><a href="#termination">12. Termination</a></li>
+        <li><a href="#governing-law">13. Governing Law & Dispute Resolution</a></li>
+        <li><a href="#changes">14. Changes to These Terms</a></li>
+        <li><a href="#contact">15. Contact Us</a></li>
+      </ul>
+    </div>
+
+    <main>
+      <!-- Desktop TOC -->
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">On this page</p>
+        <ul>
+          <li><a href="#welcome">Overview</a></li>
+          <li><a href="#eligibility">1. Eligibility</a></li>
+          <li><a href="#purpose">2. Educational Purpose</a></li>
+          <li><a href="#accounts">3. Account Registration & Security</a></li>
+          <li><a href="#payments">4. Payments & Subscriptions</a></li>
+          <li><a href="#acceptable-use">5. Acceptable Use</a></li>
+          <li><a href="#ip">6. Intellectual Property</a></li>
+          <li><a href="#student-data">7. Student Data & Privacy</a></li>
+          <li><a href="#third-parties">8. Third-Party Services</a></li>
+          <li><a href="#disclaimers">9. Disclaimers</a></li>
+          <li><a href="#liability">10. Limitation of Liability</a></li>
+          <li><a href="#indemnity">11. Indemnification</a></li>
+          <li><a href="#termination">12. Termination</a></li>
+          <li><a href="#governing-law">13. Governing Law & Dispute Resolution</a></li>
+          <li><a href="#changes">14. Changes to These Terms</a></li>
+          <li><a href="#contact">15. Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <article role="article">
+        <h2 id="welcome">Terms and Conditions</h2>
+        <p class="card privacy_fs14">
+          Welcome to Space Tech Explorers (“we,” “our,” “us”). These Terms and Conditions (“Terms”) govern your use of
+          our website, educational programs, satellite kits, workshops, mobile applications, and related services
+          (collectively, the “Services”). By accessing or using our Services, you agree to be bound by these Terms. If
+          you do not agree, you must not use our Services.
+        </p>
+
+        <h2 id="eligibility">1. Eligibility</h2>
+        <ul class="privacy_pl privacy_fs14">
+          <li>Our Services are intended for students, parents, educators, and schools.</li>
+          <li>Children under 13 must have verifiable parental or guardian consent to participate.</li>
+          <li>By registering, you confirm the information provided is accurate and that you have authority to enter into
+            this agreement.</li>
+        </ul>
+
+        <h2 id="purpose">2. Educational Purpose</h2>
+        <p class="privacy_fs14">
+          Space Tech Explorers provides hands-on space technology programs, including CubeSat kits, AR/VR experiences,
+          and STEM-aligned workshops. Our offerings are for <strong>educational purposes only</strong> and must not be
+          used for commercial satellite operations or unauthorized experiments.
+        </p>
+
+        <h2 id="accounts">3. Account Registration &amp; Security</h2>
+        <ul class="privacy_pl privacy_fs14">
+          <li>You may need to create an account to access certain Services.</li>
+          <li>You are responsible for maintaining the confidentiality of your credentials and for all activities under
+            your account.</li>
+          <li>Notify us immediately of any unauthorized access or security breach.</li>
+        </ul>
+
+        <h2 id="payments">4. Payments &amp; Subscriptions</h2>
+        <ul class="privacy_pl privacy_fs14">
+          <li>Certain Services require payment (e.g., kits, workshops, school memberships).</li>
+          <li>Unless otherwise stated, all fees are non-refundable. Local consumer protections may apply.</li>
+          <li>Subscriptions may renew automatically unless canceled prior to the renewal date.</li>
+        </ul>
+
+        <h2 id="acceptable-use">5. Acceptable Use</h2>
+        <p>You agree not to:</p>
+        <ul class="privacy_pl privacy_fs14">
+          <li>Use the Services for unlawful, harmful, or unsafe activities.</li>
+          <li>Interfere with or disrupt our platforms, networks, or security features.</li>
+          <li>Copy, resell, or redistribute curriculum or materials without written permission.</li>
+          <li>Engage in unauthorized satellite communications, spectrum use, or data interception.</li>
+        </ul>
+
+        <h2 id="ip">6. Intellectual Property</h2>
+        <ul class="privacy_pl privacy_fs14">
+          <li>All content (curriculum, software, images, videos, branding) is owned by Space Tech Explorers or our
+            licensors.</li>
+          <li>Permitted use: personal or educational use within the program context.</li>
+          <li>Any commercial use or public redistribution requires our prior written consent.</li>
+        </ul>
+
+        <h2 id="student-data">7. Student Data &amp; Privacy</h2>
+        <ul class="privacy_pl privacy_fs14">
+          <li>We may collect limited student information to deliver personalized learning.</li>
+          <li>All data handling follows our <a href="/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>.
+          </li>
+          <li>Schools and parents must ensure compliance with applicable child data protection laws.</li>
+        </ul>
+
+        <h2 id="third-parties">8. Third-Party Services</h2>
+        <p class="privacy_fs14">
+          Our Services may link to third-party resources (e.g., NASA, ISRO, STEM.org). We are not responsible for the
+          content, availability, or policies of such external sites or services.
+        </p>
+
+        <h2 id="disclaimers">9. Disclaimers</h2>
+        <ul class="privacy_pl privacy_fs14">
+          <li>Services are provided “as is” and “as available,” without warranties of any kind.</li>
+          <li>We do not guarantee uninterrupted access, error-free content, or specific learning outcomes.</li>
+          <li>Space projects may involve inherent risks; appropriate supervision and adherence to safety guidelines are
+            required.</li>
+        </ul>
+
+        <h2 id="liability">10. Limitation of Liability</h2>
+        <p class="privacy_fs14">
+          To the maximum extent permitted by law, Space Tech Explorers shall not be liable for any indirect, incidental,
+          special, consequential, or punitive damages, or for loss of profits, data, or goodwill. Our total liability
+          for any claim shall not exceed the amount paid (if any) for the specific Service giving rise to the claim.
+        </p>
+
+        <h2 id="indemnity">11. Indemnification</h2>
+        <p class="privacy_fs14">
+          You agree to defend, indemnify, and hold harmless Space Tech Explorers, its affiliates, mentors, and partners
+          from and against any claims, damages, liabilities, costs, and expenses arising from your misuse of the
+          Services or violation of these Terms.
+        </p>
+
+        <h2 id="termination">12. Termination</h2>
+        <ul class="privacy_pl privacy_fs14">
+          <li>We may suspend or terminate access if you violate these Terms or engage in unsafe use.</li>
+          <li>You may discontinue use at any time; certain obligations survive termination (e.g., IP, liability,
+            indemnity).</li>
+        </ul>
+
+        <h2 id="governing-law">13. Governing Law &amp; Dispute Resolution</h2>
+        <ul class="privacy_pl privacy_fs14">
+          <li>These Terms are governed by the laws of the State of California, USA, without regard to conflict-of-law
+            principles.</li>
+          <li>Disputes will be resolved by binding arbitration in Alameda County, California, in English, under the
+            Commercial Arbitration Rules of the AAA, except where prohibited by law.</li>
+          <li>Either party may seek injunctive or equitable relief in a court of competent jurisdiction for IP or data
+            security matters.</li>
+        </ul>
+
+        <h2 id="changes">14. Changes to These Terms</h2>
+        <p class="privacy_fs14">
+          We may update these Terms from time to time. Updates will be effective on the “Effective Date” indicated at
+          the top. Continued use of the Services after changes constitutes acceptance of the revised Terms.
+        </p>
+
+        <h2 id="contact">15. Contact Us</h2>
+        <address class="card privacy_fs14" style="font-style:normal">
+          <strong>Space Tech Explorers</strong><br />
+          Dublin, California, USA<br />
+          Email: <a href="mailto:legal@spacetechexplorers.com">legal@spacetechexplorers.com</a>
+        </address>
+      </article>
+    </main>
+
+
+  </div>
+
+  <footer>
+    <div style="text-align: center;" class="privacy_fs14">© <span id="year"></span> Space Tech Explorers. All rights
+      reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
