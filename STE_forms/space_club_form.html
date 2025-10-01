@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" href="assets/ste_logo_new.png">
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="../assets/ste_logo_new.png">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
     <style>
         .demo_container {
@@ -30,8 +30,6 @@
       align-items: center;
       gap: 5px;
     }
-
-    
   </style>
 </head>
 
@@ -39,104 +37,62 @@
     <main>
         <section class="demo_section">
             <div class="nav_links-btn">
-                <a href="index.html" class="same_btn nav_action-btn">Home</a>
+                <a href="../index.html" class="same_btn nav_action-btn">Home</a>
             </div>
             <div class="demo_container">
                 <div class="demo_header">
                     <h2 class="demo_title">
-                        <span class="demo_highlight why_explorers-title-ori">Space Tech</span><br>
-                        <span class="demo_highlight why_explorers-title-exo">Store</span>
+                        <span class="demo_highlight why_explorers-title-ori">Space Tech Club</span><br>
+                        <span class="demo_highlight why_explorers-title-exo">in Action</span>
                     </h2>
                     <p class="demo_description">
-                        Bring hands-on space tech lab to your classroom. Tell us about your organization and goals. <br>
-                        We’ll follow up with planning, equipment options, and scheduling.
+                        Want to start a Space Tech Club at your school? Tell us a bit about you and your school. <br>
+                        We’ll follow up with support—mentors, workshops, and starter resources.
                     </p>
                     <div class="contact_logo">
-                        <img src="assets/ste_logo_new.png" alt="img">
+                        <img src="../assets/ste_logo_new.png" alt="img">
                     </div>
                 </div>
                 <div class="demo_form-wrapper">
-                    <h3 class="demo_form-title">Space Tech Store Form</h3>
-                    <form id="store_form" class="demo_form">
-                      <div class="demo_form-fields">
-                        
-                        <!-- Product Option -->
-                        <div class="demo_form-row">
-                            <label class="demo_label">Cubesat Kit *</label>
-                            <div class="demo_radio-group">
-                              <label>
-                                <input type="radio" name="store_item" value="store_with_camera" required>
-                                With Camera
-                              </label>
-                              <label>
-                                <input type="radio" name="store_item" value="store_without_camera" required>
-                                Without Camera
-                              </label>
+                    <h3 class="demo_form-title">Space Tech Club Interest Form</h3>
+                    <form action="#" class="demo_form space_club-form">
+                        <div class="demo_form-fields">
+                            <!-- Row 1: Name + Email -->
+                            <div class="demo_form-row">
+                                <div class="demo_field">
+                                    <label for="space_clubs_name" class="demo_label">Name *</label>
+                                    <input type="text" id="space_clubs_name" name="space_clubs_name" placeholder="Full name" class="demo_input" required>
+                                </div>
                             </div>
-                          </div>
-                  
-                        <!-- Email -->
-                        <div class="demo_form-row">
-                          <div class="demo_field">
-                            <label for="store_email" class="demo_label">Email *</label>
-                            <input type="email" id="store_email" name="store_email" placeholder="you@domain.com" class="demo_input" required>
-                          </div>
+                            <div class="demo_form-row">
+                                <div class="demo_field">
+                                    <label for="space_clubs_email" class="demo_label">Email *</label>
+                                    <input type="email" id="space_clubs_email" name="space_clubs_email" placeholder="you@school.org" class="demo_input" required>
+                                </div>
+                            </div>
+                            <!-- Row 2: Phone Number + School Name -->
+                            <div class="demo_form-row">
+                                <div class="demo_field">
+                                    <label for="space_clubs_number" class="demo_label">Phone Number</label>
+                                    <input type="tel" id="space_clubs_number" name="space_clubs_number" placeholder="(555) 555-1234" class="demo_input" pattern="^[+()0-9\s-]{7,}$" title="Use digits, spaces, parentheses or dashes.">
+                                </div>
+                            </div>
+                            <div class="demo_form-row">
+                                <div class="demo_field">
+                                    <label for="space_clubs_school" class="demo_label">School Name *</label>
+                                    <input type="text" id="space_clubs_school" name="space_clubs_school" placeholder="School Name" class="demo_input" required>
+                                </div>
+                            </div>
+                            <!-- Row 3: Description -->
+                            <div class="demo_field full-width">
+                                <label for="space_clubs_disc" class="demo_label">Description *</label>
+                                <textarea id="space_clubs_disc" name="space_clubs_disc" placeholder="Tell us what support you need for your Space Tech Club." class="demo_textarea" required></textarea>
+                            </div>
                         </div>
-                  
-                        <!-- Phone -->
-                        <div class="demo_form-row">
-                          <div class="demo_field">
-                            <label for="store_phone" class="demo_label">Phone Number *</label>
-                            <input type="tel" id="store_phone" name="store_phone" placeholder="(555) 555-1234" class="demo_input" required
-                              pattern="^[+()0-9\s-]{7,}$" title="Use digits, spaces, parentheses or dashes.">
-                          </div>
-                        </div>
-                  
-                        <!-- Address -->
-                        <div class="demo_form-row">
-                          <div class="demo_field">
-                            <label for="store_address" class="demo_label">Address *</label>
-                            <textarea id="store_address" name="store_address" placeholder="Street address" class="demo_textarea" required></textarea>
-                          </div>
-                        </div>
-                  
-                        <!-- City -->
-                        <div class="demo_form-row">
-                          <div class="demo_field">
-                            <label for="store_city" class="demo_label">City *</label>
-                            <input type="text" id="store_city" name="store_city" placeholder="City" class="demo_input" required>
-                          </div>
-                        </div>
-                  
-                        <!-- State -->
-                        <div class="demo_form-row">
-                          <div class="demo_field">
-                            <label for="store_state" class="demo_label">State *</label>
-                            <input type="text" id="store_state" name="store_state" placeholder="State" class="demo_input" required>
-                          </div>
-                        </div>
-                  
-                        <!-- Country -->
-                        <div class="demo_form-row">
-                          <div class="demo_field">
-                            <label for="store_country" class="demo_label">Country *</label>
-                            <input type="text" id="store_country" name="store_country" placeholder="Country" class="demo_input" required>
-                          </div>
-                        </div>
-                  
-                        <!-- Zipcode -->
-                        <div class="demo_form-row">
-                          <div class="demo_field">
-                            <label for="store_zipcode" class="demo_label">Zip Code *</label>
-                            <input type="text" id="store_zipcode" name="store_zipcode" placeholder="123456" class="demo_input" required>
-                          </div>
-                        </div>
-                  
-                      </div>
-                  
-                      <button type="submit" class="demo_button same_btn get_started">Submit</button>
+                        <button type="submit" class="demo_button same_btn get_started">Submit</button>
                     </form>
-                  </div>                  
+                    </form>
+                </div>
             </div>
         </section>
     </main>
@@ -151,24 +107,20 @@
     <script src="js/script.js"></script>
 
     <script>
-        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbynH4HbqBo-aKd4K7SAguFdd-YlAGQ2Ubia4ykE-cPzLHQnrPluPbOQuDr_1yDOv0IJpg/exec";
+        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwNCiTM57khRwHkztfF81PZolbybk0tGq5smN_ij-NyeI8qmvGJQm_6Iurn6CkJX1Mk/exec";
       
         document.addEventListener("DOMContentLoaded", function () {
           const btn = document.querySelector(".get_started");
-          const form = document.getElementById("store_form"); // ✅ id use kiya
+          const form = document.querySelector(".space_club-form");
       
-          btn.addEventListener("click", async function (e) {
-            e.preventDefault(); // ✅ submit reload ko roka
+          btn.addEventListener("click", async function () {
+            const name = document.getElementById("space_clubs_name").value.trim();
+            const email = document.getElementById("space_clubs_email").value.trim();
+            const number = document.getElementById("space_clubs_number").value.trim();
+            const school = document.getElementById("space_clubs_school").value.trim();
+            const disc = document.getElementById("space_clubs_disc").value.trim();
       
-            const email = document.getElementById("store_email").value.trim();
-            const number = document.getElementById("store_phone").value.trim();
-            const address = document.getElementById("store_address").value.trim();
-            const city = document.getElementById("store_city").value.trim();
-            const state = document.getElementById("store_state").value.trim();
-            const zipcode = document.getElementById("store_zipcode").value.trim();
-            const item = form.querySelector('input[name="store_item"]:checked'); // ✅ radio check
-      
-            if (!email || !number || !city || !address || !state || !zipcode || !item) {
+            if (!name || !email || !number || !disc || !school) {
               alert("Please fill all the fields before submitting.");
               return; 
             }
@@ -191,7 +143,7 @@
                 alert("Form submitted successfully!");
                 form.reset();
               } else {
-                alert("Form submitted, but server did not return proper response. Check sheet!");
+                alert("Form submitted, but server did not return proper JSON. Check sheet!");
                 console.log("Server response:", text);
               }
       
@@ -205,7 +157,6 @@
           });
         });
       </script>
-      
 </body>
 
 </html>

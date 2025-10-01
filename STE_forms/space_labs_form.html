@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" href="assets/ste_logo_new.png">
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="../assets/ste_logo_new.png">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
     <style>
         .demo_container {
@@ -37,31 +37,56 @@
     <main>
         <section class="demo_section">
             <div class="nav_links-btn">
-                <a href="index.html" class="same_btn nav_action-btn">Home</a>
+                <a href="../index.html" class="same_btn nav_action-btn">Home</a>
             </div>
             <div class="demo_container">
                 <div class="demo_header">
                     <h2 class="demo_title">
-                        <span class="demo_highlight why_explorers-title-ori">Space</span><br>
-                        <span class="demo_highlight why_explorers-title-exo">Subscription</span>
+                        <span class="demo_highlight why_explorers-title-ori">Space Tech Lab</span><br>
+                        <span class="demo_highlight why_explorers-title-exo">for Schools & Colleges</span>
                     </h2>
                     <p class="demo_description">
                         Bring hands-on space tech lab to your classroom. Tell us about your organization and goals. <br>
                         We’ll follow up with planning, equipment options, and scheduling.
                     </p>
                     <div class="contact_logo">
-                        <img src="assets/ste_logo_new.png" alt="img">
+                        <img src="../assets/ste_logo_new.png" alt="img">
                     </div>
                 </div>
                 <div class="demo_form-wrapper">
-                    <h3 class="demo_form-title">Space Subscription Form</h3>
-                    <form action="#" class="demo_form sub_form">
+                    <h3 class="demo_form-title">Space Tech Lab Interest Form</h3>
+                    <form action="#" class="demo_form space_labs-form">
                         <div class="demo_form-fields">
+                            <!-- Row 1: Name + Email -->
                             <div class="demo_form-row">
                                 <div class="demo_field">
-                                    <label for="space_sub_email" class="demo_label">Email *</label>
-                                    <input type="space_sub_email" id="space_sub_email" name="space_sub_email" placeholder="you@school.org" class="demo_input" required>
+                                    <label for="space_labs_name" class="demo_label">Name *</label>
+                                    <input type="text" id="space_labs_name" name="space_labs_name" placeholder="Full name" class="demo_input" required>
                                 </div>
+                            </div>
+                            <div class="demo_form-row">
+                                <div class="demo_field">
+                                    <label for="space_labs_email" class="demo_label">Email *</label>
+                                    <input type="space_labs_email" id="space_labs_email" name="space_labs_email" placeholder="you@school.org" class="demo_input" required>
+                                </div>
+                            </div>
+                            <!-- Row 2: Phone Number + School Name -->
+                            <div class="demo_form-row">
+                                <div class="demo_field">
+                                    <label for="space_labs_number" class="demo_label">Phone Number</label>
+                                    <input type="tel" id="space_labs_number" name="space_labs_number" placeholder="(555) 555-1234" class="demo_input" pattern="^[+()0-9\s-]{7,}$" title="Use digits, spaces, parentheses or dashes.">
+                                </div>
+                            </div>
+                            <div class="demo_form-row">
+                                <div class="demo_field">
+                                    <label for="space_labs_org" class="demo_label">Organization Name *</label>
+                                    <input type="text" id="space_labs_org" name="space_labs_org" placeholder="School/College name" class="demo_input" required>
+                                </div>
+                            </div>
+                            <!-- Row 3: Description -->
+                            <div class="demo_field full-width">
+                                <label for="space_labs_disc" class="demo_label">Description *</label>
+                                <textarea id="space_labs_disc" name="space_labs_disc" placeholder="Tell us what you’re looking for—your goals, timing, and any questions." class="demo_textarea" required></textarea>
                             </div>
                         </div>
                         <button type="submit" class="demo_button same_btn get_started">Submit</button>
@@ -82,16 +107,20 @@
     <script src="js/script.js"></script>
 
     <script>
-        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzUrsAF9lMsvvZ44dvvKN3H_qLI_00G0wVMHzuWTNszwelmuP9uUh9IWTP3s_7fxXMUgw/exec";
+        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwuOjiqA0wLzeNng740NDNeVdqHAafLmR3yH8S0FyK0-06NWFQDsCEt2JSWqoUFemkFGA/exec";
       
         document.addEventListener("DOMContentLoaded", function () {
           const btn = document.querySelector(".get_started");
-          const form = document.querySelector(".sub_form");
+          const form = document.querySelector(".space_labs-form");
       
           btn.addEventListener("click", async function () {
-            const email = document.getElementById("space_sub_email").value.trim();
+            const name = document.getElementById("space_labs_name").value.trim();
+            const email = document.getElementById("space_labs_email").value.trim();
+            const number = document.getElementById("space_labs_number").value.trim();
+            const org = document.getElementById("space_labs_org").value.trim();
+            const disc = document.getElementById("space_labs_disc").value.trim();
       
-            if (!email ) {
+            if (!name || !email || !number || !disc || !org) {
               alert("Please fill all the fields before submitting.");
               return; 
             }
